@@ -25,9 +25,11 @@ app.get("/", (req, res)=>{
     res.sendFile(__dirname+"/views/home.html")
     }
 )
-
-app.get("/blog")
-
+app.get("/blog", (req, res)=>{
+    console.log("Esta es la request de GET /");
+    res.sendFile(__dirname+"/views/blog.html")
+    }
+)
 // START THE SERVER
 // Make your Express server listen on port 5005:
 
