@@ -36,7 +36,11 @@ app.get("/api/projects", (req, res) => {
 
 app.get("/api/articles", (req, res) => {
     res.json(articles);
-  });
+});
+
+app.get("*", (req,res)=>{
+    res.sendFile(__dirname + "/views/not-found.html");
+})
 
 // START THE SERVER
 // Make your Express server listen on port 5005:
